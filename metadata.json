@@ -1,0 +1,6 @@
+{
+  "name": "VIBE CODING — Flow State Creation",
+  "description": "An Awwwards-caliber digital experience exploring vibe-coding, kinetic particle typography, and natural language software creation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
