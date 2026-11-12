@@ -3,6 +3,13 @@
 An Awwwards Site of the Day-caliber digital experience exploring **Google Gemini**, frontier native multimodality, 2-million-token context depth, and real-time live perception through interactive creative technology.
 
 ---
+## Website details
+| Field | Details |
+|---|---|
+| Website name | Gemini Ai VibeCoding |
+| Website link | https://gemini-ai-vibecoding.replit.app |
+| GitHub Repository | https://github.com/Elliott7710/Gemini-ai-website |
+---
 
 ## 🌟 Key Features
 
