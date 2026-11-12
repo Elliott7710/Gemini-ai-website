@@ -1,0 +1,85 @@
+@import "./css/index.css";
+
+@layer base {
+  :root {
+    --font-display: 'Syne', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #08080c;
+    color: #f2f2f6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom noise grain overlay */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Ambient glow utility */
+.ambient-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.06) 35%, rgba(8, 8, 12, 0) 70%);
+}
+
+/* Chromatic aberration hover effect */
+.chromatic-text {
+  position: relative;
+  transition: text-shadow 0.25s ease;
+}
+
+.chromatic-text:hover {
+  text-shadow: 
+    -1.5px 0px 0px rgba(255, 45, 85, 0.65),
+    1.5px 0px 0px rgba(0, 240, 255, 0.65);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08080c;
+}
+::-webkit-scrollbar-thumb {
+  background: #27273a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Lenis smooth scrolling agency integration */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* GPU hardware acceleration hints for 120 FPS fluidity */
+.hardware-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}

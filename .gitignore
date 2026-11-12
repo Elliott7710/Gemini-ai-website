@@ -1,8 +1,68 @@
-node_modules/
-build/
-dist/
-coverage/
-.DS_Store
+# Logs
+logs
 *.log
-.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic / Coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Build and Bundler outputs
+dist/
+build/
+out/
+.vite/
+.turbo/
+.cache/
+
+# Dependencies
+node_modules/
+
+# Environment and Secrets (CRITICAL: Never commit credentials)
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
 !.env.example
+*.pem
+*.key
+*.cert
+*.pfx
+*.p12
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE & Editor files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+*.orig
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Temporary files & Caches
+*.tmp
+*.temp
+.eslintcache

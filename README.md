@@ -3,12 +3,7 @@
 An Awwwards Site of the Day-caliber digital experience exploring **Google Gemini**, frontier native multimodality, 2-million-token context depth, and real-time live perception through interactive creative technology.
 
 ---
-## Website details
-| Field | Details |
-|---|---|
-| Website name | Gemini Ai VibeCoding |
-| Website link | https://gemini-ai-vibecoding.replit.app |
-| GitHub Repository | https://github.com/Elliott7710/Gemini-ai-website |
+
 ## 🌟 Key Features
 
 ### 1. Kinetic Nanite `<SwarmLoader />`
@@ -85,3 +80,99 @@ Gemini AI Experience
     ├── tsconfig.json                 # TypeScript compiler options (ES2022, strict type safety)
     ├── metadata.json                 # AI Studio capability configuration & permissions
     └── .env.example                  # Environment variable schema (GEMINI_API_KEY, APP_URL)
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Bundler**: [Vite 8](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation & 3D**: [Framer Motion](https://motion.dev/)
+- **Canvas / Physics**: Native HTML5 Canvas 2D / WebGL Additive Compositor
+- **Smooth Scrolling**: [Lenis](https://lenis.darkroom.engineering/)
+- **Audio Synthesis**: Native Web Audio API (`AudioContext`, `OscillatorNode`, `BiquadFilter`)
+- **Backend**: [Express](https://expressjs.com/) on Node.js
+- **AI SDK**: [@google/genai](https://www.npmjs.com/package/@google/genai)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18.0.0 or higher recommended)
+- npm or bun
+
+### Installation
+1. Clone or download the repository:
+   ```bash
+   git clone <repo-url>
+   cd <project-folder>
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Configure environment variables:
+   Create a `.env` file from `.env.example`:
+   ```bash
+   cp .env.example .env
+   ```
+   Add your Gemini API key:
+   ```env
+   GEMINI_API_KEY="your-gemini-api-key-here"
+   APP_URL="http://localhost:3000"
+   ```
+
+### Running the App
+- **Development Server** (runs on port 3000):
+  ```bash
+  npm run dev
+  ```
+- **Type Checking & Linting**:
+  ```bash
+  npm run lint
+  ```
+- **Production Build**:
+  ```bash
+  npm run build
+  ```
+- **Run Full-Stack Server**:
+  ```bash
+  npm start
+  ```
+
+---
+
+## 🛡️ Security & Pre-Push Checklist
+
+- **Zero Client-Side Key Exposure**: The `GEMINI_API_KEY` is kept strictly on the backend Express server (`server.ts`). Client components never touch the API key directly and communicate via `/api/gemini/generate`.
+- **Pre-Push Safe**: `.gitignore` strictly prevents `.env`, `.env.*` (except `.env.example`), logs, local caches, and OS artifacts from being tracked by git.
+- **Server Hardening**:
+  - `X-Content-Type-Options: nosniff` and `X-Frame-Options: SAMEORIGIN` HTTP security headers.
+  - JSON payload size caps (`256kb`) to prevent memory exhaustion attacks.
+  - Model parameter whitelisting and input length bounds checking.
+  - Sanitized error masking to prevent internal stack trace leakage.
+- **Safe Local Git Setup**:
+  ```bash
+  # Initialize repository
+  git init
+  # Verify untracked files adhere to .gitignore (no .env should appear)
+  git status
+  # Stage, commit, and push
+  git add .
+  git commit -m "feat: initial commit for Gemini AI experience"
+  git branch -M main
+  git remote add origin https://github.com/<your-username>/<your-repo-name>.git
+  git push -u origin main
+  ```
+
+---
+
+## 📄 License
+[Apache-2.0](LICENSE) © 2026
+
